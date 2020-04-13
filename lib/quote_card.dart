@@ -11,7 +11,10 @@ class QuoteCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        
+        Navigator.pushNamed(context, "/quote",arguments: {
+          "quote":quote.text,
+          "author":quote.author
+        });
         },
           child: Card(
         margin: EdgeInsets.fromLTRB(16.0,16.0,16.0,0.0),
